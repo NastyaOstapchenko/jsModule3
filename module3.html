@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Модуль 3 </title>
+  </head>
+  <body>
+
+<p id="new"></p>
+
+    <script type="text/javascript">
+
+let animals = ["Собака", "Кошка", "Птица", "Слон", "Бабочка", "Кенгуру", "Муравей"];
+let newVar = document.getElementById("new");
+
+newVar.textContent = animals;
+    </script>
+
+
+
+
+<div class="second-task">
+
+    <input type="text" name="" value="" placeholder="Введите индекс массива">
+    <input type="text" name="" value="" placeholder="Введите значение">
+    <button onclick="fun()" type="button" id="ok" name="button">Ok</button>
+
+    <script type="text/javascript">
+      function fun() {
+
+      }
+    </script>
+</div>
+
+
+
+
+
+<div class="pop-button">
+<button onclick="funPop()" type="button" name="button">pop</button>
+<p id="newArr"></p>
+<script type="text/javascript">
+function funPop() {
+let poppedArr = document.getElementById("newArr");
+animals.pop();
+poppedArr.textContent = animals;
+}
+</script>
+</div>
+
+
+
+
+<div class="shift-button">
+<button onclick="funShift()" type="button" name="button">shift</button>
+<p id="newNewArr"></p>
+<script type="text/javascript">
+function funShift() {
+let shiftedArr = document.getElementById("newNewArr");
+animals.shift();
+shiftedArr.textContent = animals;
+}
+</script>
+</div>
+
+
+
+
+<div class="push-button">
+<button onclick="funPush()" type="button" name="button">push</button>
+<p id="newNewNewArr"></p>
+<script type="text/javascript">
+function funPush() {
+let pushedArr = document.getElementById("newNewNewArr");
+animals.push("Хомяк");
+pushedArr.textContent = animals;
+}
+</script>
+</div>
+
+
+
+
+<div class="unshift-button">
+<button onclick="funUnshift()" type="button" name="button">unshift</button>
+<p id="newNewNewNewArr"></p>
+<script type="text/javascript">
+function funUnshift() {
+let unshiftedArr = document.getElementById("newNewNewNewArr");
+animals.unshift("Щегол");
+unshiftedArr.textContent = animals;
+}
+</script>
+</div>
+
+
+  </body>
+</html>
