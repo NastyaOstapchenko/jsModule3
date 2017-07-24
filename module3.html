@@ -20,15 +20,18 @@ newVar.textContent = animals;
 
 
 <div class="second-task">
-
-    <input type="text" name="" value="" placeholder="Введите индекс массива">
-    <input type="text" name="" value="" placeholder="Введите значение">
-    <button onclick="fun()" type="button" id="ok" name="button">Ok</button>
+    <input id="indexVar" type="text" name="" value="" placeholder="Введите индекс массива">
+    <input id="znachenieVar" type="text" name="" value="" placeholder="Введите значение">
+    <button onclick="funForArr()" type="button" id="ok" name="button">Ok</button>
+    <p id="newMassiv"></p>
 
     <script type="text/javascript">
-      function fun() {
-
-      }
+    let index = document.getElementById("indexVar");
+    let znachenie = document.getElementById("znachenieVar");
+      function funForArr() {
+        animals.splice(index.value, 0, znachenie.value);
+        newMassiv.textContent = animals;
+      };
     </script>
 </div>
 
@@ -40,8 +43,9 @@ newVar.textContent = animals;
 <button onclick="funPop()" type="button" name="button">pop</button>
 <p id="newArr"></p>
 <script type="text/javascript">
-function funPop() {
 let poppedArr = document.getElementById("newArr");
+
+function funPop() {
 animals.pop();
 poppedArr.textContent = animals;
 }
@@ -55,8 +59,8 @@ poppedArr.textContent = animals;
 <button onclick="funShift()" type="button" name="button">shift</button>
 <p id="newNewArr"></p>
 <script type="text/javascript">
+let shiftedArr = document.getElementById("newNewArr");;
 function funShift() {
-let shiftedArr = document.getElementById("newNewArr");
 animals.shift();
 shiftedArr.textContent = animals;
 }
@@ -70,8 +74,8 @@ shiftedArr.textContent = animals;
 <button onclick="funPush()" type="button" name="button">push</button>
 <p id="newNewNewArr"></p>
 <script type="text/javascript">
-function funPush() {
 let pushedArr = document.getElementById("newNewNewArr");
+function funPush() {
 animals.push("Хомяк");
 pushedArr.textContent = animals;
 }
@@ -85,8 +89,8 @@ pushedArr.textContent = animals;
 <button onclick="funUnshift()" type="button" name="button">unshift</button>
 <p id="newNewNewNewArr"></p>
 <script type="text/javascript">
-function funUnshift() {
 let unshiftedArr = document.getElementById("newNewNewNewArr");
+function funUnshift() {
 animals.unshift("Щегол");
 unshiftedArr.textContent = animals;
 }
